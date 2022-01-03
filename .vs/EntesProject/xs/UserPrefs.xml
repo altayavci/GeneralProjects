@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{FEB35206-F6F8-41C3-8062-D51DD8775C4F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DatabaseOperations/OperationsDal.cs">
+    <Files>
+      <File FileName="DatabaseOperations/OperationsDal.cs" Line="427" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.EntesProject PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.5.0.0.2083\build\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.5.0.0.2083\build\Xamarin.Forms.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEB35206-F6F8-41C3-8062-D51DD8775C4F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EntesProject</RootNamespace>
+    <AssemblyName>EntesProject</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NModbus4, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NModbus4.2.1.0\lib\net40\NModbus4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Mono.CSharp">
+      <HintPath>..\packages\Mono.CSharp.4.0.0.143\lib\4.5\Mono.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CSharp" />
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.5.0.0.2083\lib\netstandard2.0\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.5.0.0.2083\lib\netstandard2.0\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.5.0.0.2083\lib\netstandard2.0\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstracts\BaseAbstract.cs" />
+    <Compile Include="Abstracts\DataLoads.cs" />
+    <Compile Include="Abstracts\ConnectionController.cs" />
+    <Compile Include="Abstracts\SqlInterfaces.cs" />
+    <Compile Include="Forms\ModbusLights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModbusLights.Designer.cs">
+      <DependentUpon>ModbusLights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModbusOperations\ModbusDal.cs" />
+    <Compile Include="DatabaseOperations\OperationsDal.cs" />
+    <Compile Include="Forms\DataAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataAdd.Designer.cs">
+      <DependentUpon>DataAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataDelete.Designer.cs">
+      <DependentUpon>DataDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataGet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataGet.Designer.cs">
+      <DependentUpon>DataGet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataUpdate.Designer.cs">
+      <DependentUpon>DataUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModbusGet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModbusGet.Designer.cs">
+      <DependentUpon>ModbusGet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModbusDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModbusDesign.Designer.cs">
+      <DependentUpon>ModbusDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModbusOperations\ModbusProcces.cs" />
+    <Compile Include="Objects.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\DataView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataView.Designer.cs">
+      <DependentUpon>DataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\DataAdd.resx">
+      <DependentUpon>DataAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataDelete.resx">
+      <DependentUpon>DataDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataGet.resx">
+      <DependentUpon>DataGet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataUpdate.resx">
+      <DependentUpon>DataUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataView.resx">
+      <DependentUpon>DataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModbusGet.resx">
+      <DependentUpon>ModbusGet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModbusDesign.resx">
+      <DependentUpon>ModbusDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModbusLights.resx">
+      <DependentUpon>ModbusLights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.5.0.0.2083\build\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.5.0.0.2083\build\Xamarin.Forms.targets')" />
+</Project>
